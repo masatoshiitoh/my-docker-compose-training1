@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:6.0.9
+
+  vertxstarter3:
+    depends_on:
+      - redis
+    image: vertxstarter3
+    ports:
+      - "8888:8888"
+
+
+
